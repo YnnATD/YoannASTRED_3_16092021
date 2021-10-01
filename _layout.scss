@@ -1,0 +1,51 @@
+@import "_utils";
+.ohmyfood_logo_bloc{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+a{
+    text-decoration: none;
+.header_logo{
+    @include police;
+    font-size: 2.5em;
+    text-align: center;
+    color: black;
+    padding-top: 31px;
+    padding-bottom: 15px;
+    margin: -21px;
+    background-color: white; 
+    box-shadow: 0px 2px 15px -5px #000000;
+}
+}    
+
+
+footer{
+    background-color: #353535;
+    .footer_title{
+        @include police;
+        color: white;
+        padding-left: 25px;
+        padding-top: 20px;
+        margin-top: 0;
+        a{
+        color: white;
+        text-decoration: none;
+        }  
+    }
+    ul{
+        padding-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    li{
+        list-style: none;
+        color:white;
+        padding-bottom: 5px;
+    }
+    .footer__icon{
+        color: white;
+        margin-right: 5px;
+    }
+}

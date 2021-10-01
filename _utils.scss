@@ -1,0 +1,21 @@
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-gradient:linear-gradient(to top left,$color-primary,$color-secondary);
+
+@mixin police {
+    font-family: Shrikhand,"cursive";
+}
+@mixin img_size {
+    width: 335px;
+    height: 175px;
+}
+@mixin button {
+    padding: 10px;
+    border-radius: 100px;
+    color: white;
+    cursor: pointer;
+    background:$color-gradient;
+    text-decoration: none;
+}
+  

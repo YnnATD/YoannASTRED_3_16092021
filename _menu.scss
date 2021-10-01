@@ -1,0 +1,86 @@
+.back__icon{
+    position: relative;
+    font-size: 1.2rem;
+    right: 0px;
+    padding-left: 15px;
+    top: 45px;
+}
+.picture_top{
+    border-radius: inherit;
+    height: 285px;
+    margin-top: 104px;
+}
+.container_menu{
+    margin-top: -70px;
+    border-radius: 50px 50px 0 0;
+    background-color: #f6f6f6;
+    position: relative;
+    padding-bottom: 35px;
+}
+.restaurant_name_top{
+    font-family: Shrikhand,"cursive";
+    margin-left: 20px;
+    padding-top: 30px;
+    font-size: x-large;
+    margin-bottom: 0px;
+}
+.top_like__icon{
+    font-size: 1.5em;
+    position: relative;
+    left: 300px;
+    bottom: 30px;
+    margin-bottom: 0;
+}
+.meal{
+    display: grid;
+    grid-gap: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 45px;
+}
+.food{
+    cursor: pointer;
+    border-radius: 1em;
+    background-color: white;
+    padding-left: 10px;
+    border-right: 0 solid $color-tertiary;
+    transition: border-left 300ms ease-in-out, padding-left 300ms ease-in-out;
+    &:hover {
+        padding-left: 0.5rem;
+        border-right: 5rem solid $color-tertiary;
+      }
+}
+.composition{
+    display: flex;
+    justify-content: space-between;
+    margin-top:5px ;
+    margin-bottom: 10px;
+    font-size: smaller;
+}
+.entitled{
+    margin-bottom: 0px;
+}
+    .price{
+    padding-right: 25px;
+}    
+.bottom_btn{
+    @include button;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    width: 180px;
+    justify-self: center;
+    margin-top: 35px;
+}
+.meal_name{
+    cursor: pointer;
+    width: fit-content;
+    margin: 0;
+    border-bottom: 0 solid $color-tertiary;
+    transition: border-bottom 300ms ease-in-out, padding-left 300ms ease-in-out;
+    padding-bottom: 10px;
+    &:hover {
+        padding-left: 0.25rem;
+        border-bottom: 0.25rem solid $color-tertiary;
+      }
+  }
