@@ -155,7 +155,44 @@ img{
         bottom: 30px;
       }
 }
-
 .district{
     margin-top: 5px;
+}
+@media screen and (min-width: 600px){
+    .restaurant{
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    padding-bottom: 136px;
+    border-radius: 2em 2em 0 0;
+    .restaurant_title{
+        position: absolute;
+        padding-left: 20px;
+    }
+    .bloc_card{
+        top: 70px;
+    }
+}
+      
+    .function_title{
+        text-align: center;
+        padding: 0;
+    }
+    .Function_step{
+        flex-direction: row;
+        justify-content: space-between;
+        height: 90px;
+        margin-left: 0px;
+        margin-right: 0px;
+        .tuto{
+            border-radius: 2em;
+            position: relative;
+            width: 100%;
+            margin-right: 10px;
+            margin-left: 10px;
+                &__icon{
+                    position: relative;
+                    left: -10px;
+                }
+            }
+        }
 }

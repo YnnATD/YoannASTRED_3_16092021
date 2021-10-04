@@ -279,6 +279,50 @@ img {
   margin-top: 5px;
 }
 
+@media screen and (min-width: 600px) {
+  .restaurant {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    position: relative;
+    padding-bottom: 136px;
+    border-radius: 2em 2em 0 0;
+  }
+  .restaurant .restaurant_title {
+    position: absolute;
+    padding-left: 20px;
+  }
+  .restaurant .bloc_card {
+    top: 70px;
+  }
+  .function_title {
+    text-align: center;
+    padding: 0;
+  }
+  .Function_step {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 90px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .Function_step .tuto {
+    border-radius: 2em;
+    position: relative;
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .Function_step .tuto__icon {
+    position: relative;
+    left: -10px;
+  }
+}
+
 .back__icon {
   position: relative;
   font-size: 1.2rem;
