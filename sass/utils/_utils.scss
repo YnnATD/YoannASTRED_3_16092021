@@ -17,5 +17,8 @@ $color-gradient:linear-gradient(to top left,$color-primary,$color-secondary);
     cursor: pointer;
     background:$color-gradient;
     text-decoration: none;
+    @include box_shad;
 }
-  
+@mixin box_shad {
+    box-shadow: 2px 2px 11px -6px
+}
