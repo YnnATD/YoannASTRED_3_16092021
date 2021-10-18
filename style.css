@@ -36,9 +36,7 @@ footer .footer_title a {
   text-decoration: none;
 }
 footer ul {
-  padding-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 0px;
+  margin-left: -20px;
 }
 footer li {
   list-style: none;
@@ -50,6 +48,23 @@ footer .footer__icon {
   margin-right: 5px;
 }
 
+@media screen and (min-width: 768px) {
+  footer {
+    padding-bottom: 10px;
+    padding-top: 20px;
+  }
+  footer .footer_title {
+    position: absolute;
+    padding-top: 0px;
+  }
+
+  ul {
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 110px;
+  }
+}
 .spinn {
   height: 100%;
   background: #f3f3f3;
@@ -119,13 +134,13 @@ body {
   padding-left: 55px;
   margin-top: 85px;
 }
-.location input {
+.location .research-bar {
   outline: none;
   border: none;
   background-color: #f3f3f3;
   font-size: medium;
 }
-.location input::-webkit-input-placeholder {
+.location .research-bar::-webkit-input-placeholder {
   color: black;
 }
 .location__icon {
@@ -142,6 +157,10 @@ body {
   margin-bottom: 30px;
 }
 .intro .intro_btn {
+  display: flex;
+  margin-left: 20%;
+  margin-right: 20%;
+  justify-content: center;
   padding: 10px;
   border-radius: 100px;
   color: white;
@@ -149,6 +168,41 @@ body {
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   text-decoration: none;
   box-shadow: 2px 2px 11px -6px;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
+}
+.intro .intro_btn:hover {
+  transform: scale(1.1);
+  filter: brightness(120%) saturate(120%);
+}
+
+label {
+  right: 25px;
+  bottom: 30px;
+  position: absolute;
+  font-size: 1.75em;
+}
+
+.boite {
+  visibility: hidden;
+  position: absolute;
+  right: 25px;
+  bottom: 30px;
+}
+
+input[type=checkbox]:checked ~ i {
+  font-weight: 900;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: heartanim 1.5s;
+}
+
+:hover {
+  cursor: pointer;
 }
 
 .function_title {
@@ -180,12 +234,12 @@ body {
   transition-duration: 400ms;
   cursor: pointer;
 }
-.Function_step li.tuto:hover {
+.Function_step li:hover {
   background-color: #e4d5f6;
   transition: background-color 0.3s;
   transform: scale(1.03);
 }
-.Function_step li.tuto:hover i {
+.Function_step li:hover i {
   color: #9356DC;
   transition: background-color 0.3s;
 }
@@ -275,9 +329,6 @@ img {
   right: 25px;
   bottom: 30px;
 }
-.heart .restaurant_name__icon:hover {
-  background-color: #9356DC;
-}
 
 .district {
   margin-top: 5px;
@@ -287,8 +338,9 @@ img {
   .restaurant {
     grid-template-columns: 1fr 1fr;
     position: relative;
-    padding-bottom: 136px;
     border-radius: 2em 2em 0 0;
+    padding-top: 40px;
+    padding-bottom: 170px;
   }
   .restaurant .restaurant_title {
     position: absolute;
@@ -309,6 +361,7 @@ img {
     height: 90px;
     margin-left: 0px;
     margin-right: 0px;
+    padding-bottom: 30px;
   }
   .Function_step .tuto {
     border-radius: 2em;
@@ -319,11 +372,6 @@ img {
   .Function_step .tuto__icon {
     position: relative;
     left: -10px;
-  }
-
-  ul {
-    display: flex;
-    justify-content: space-evenly;
   }
 }
 .back__icon {
@@ -354,6 +402,7 @@ img {
   padding-top: 30px;
   font-size: x-large;
   margin-bottom: 0px;
+  margin-bottom: 40px;
 }
 
 .top_like__icon {
@@ -376,26 +425,38 @@ img {
   border-radius: 1em;
   background-color: white;
   padding-left: 10px;
-  animation-name: fadeInDown;
-  animation-duration: 1s;
+  animation-name: fadeInUp;
+  animation-duration: 1.5s;
   animation-fill-mode: both;
   position: relative;
+  animation-delay: 2s;
 }
 .food:hover .price {
   animation-name: slideOutLeft;
-  animation-duration: 1s;
+  animation-duration: 800ms;
   animation-fill-mode: both;
   display: block;
 }
 .food:hover .icon_valid {
   animation-name: fadeInRight;
-  animation-duration: 2s;
+  animation-duration: 800ms;
   animation-fill-mode: both;
   display: inline;
+}
+.food:hover .icon_valid i {
+  animation-name: rotate;
+  animation-duration: 800ms;
+  background: white;
+  border-radius: 1em;
+  padding: 6px;
+  font-size: 15px;
+  color: #99E2D0;
+  margin-top: 20px;
 }
 
 .price {
   padding-right: 25px;
+  font-weight: bold;
 }
 
 .icon_valid {
@@ -408,16 +469,8 @@ img {
   bottom: 0px;
   display: flex;
   align-items: center;
-  display: none;
-}
-.icon_valid i {
-  background: white;
-  border-radius: 1em;
-  padding: 6px;
-  font-size: 15px;
-  color: #99E2D0;
-  animation: rotate 0.5s both;
-  margin-top: 20px;
+  transform: scale(0);
+  transform-origin: right;
 }
 
 .composition {
@@ -440,12 +493,19 @@ img {
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   text-decoration: none;
   box-shadow: 2px 2px 11px -6px;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
   display: flex;
   text-decoration: none;
   justify-content: center;
-  width: 180px;
+  width: 60%;
   justify-self: center;
   margin-top: 35px;
+}
+.bottom_btn:hover {
+  transform: scale(1.1);
+  filter: brightness(120%) saturate(120%);
 }
 
 .meal_name {
@@ -457,13 +517,26 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .picture_top {
+    height: 400px;
+  }
+
   .container_menu {
+    margin-top: -50px;
     display: flex;
     padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  .meal_name {
+    height: fit-content;
+    margin-bottom: 10px;
   }
 
   .meal {
     width: 100%;
+    position: relative;
+    grid-gap: 25px;
   }
 
   .entitled {
@@ -489,22 +562,16 @@ img {
 
   .bottom_btn {
     position: absolute;
-    bottom: 0px;
-    width: 100%;
-    left: 0px;
-    right: auto;
-    border-radius: 0;
-    padding-right: 0px;
-    padding-left: 0px;
-    padding-top: 10px;
-    margin-bottom: 0px;
-    margin-right: 0px;
+    left: -100%;
+    width: 95%;
+    bottom: -80px;
+    font-size: large;
   }
 }
-@keyframes fadeInDown {
+@keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, 100%, 0);
   }
   100% {
     opacity: 1;
@@ -529,12 +596,10 @@ img {
 }
 @keyframes fadeInRight {
   0% {
-    opacity: 0;
-    transform-origin: 100% 0 0scaleX;
+    transform: scaleX(0);
   }
   100% {
-    opacity: 1;
-    transform: none;
+    transform: scaleX(1);
   }
 }
 @keyframes load {
@@ -560,6 +625,29 @@ img {
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes effect_click {
+  50% {
+    transform: scale(1.5, 1.5);
+    opacity: 0;
+  }
+  99% {
+    transform: scale(0.001, 0.001);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.001, 0.001);
+    opacity: 1;
+  }
+}
+/* hearth animation gradient */
+@keyframes heartanim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

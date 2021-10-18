@@ -41,9 +41,7 @@ footer .footer_title a {
 }
 
 footer ul {
-  padding-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 0px;
+  margin-left: -20px;
 }
 
 footer li {
@@ -55,6 +53,27 @@ footer li {
 footer .footer__icon {
   color: white;
   margin-right: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    padding-bottom: 10px;
+    padding-top: 20px;
+  }
+  footer .footer_title {
+    position: absolute;
+    padding-top: 0px;
+  }
+  ul {
+    margin-top: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding-left: 110px;
+  }
 }
 
 .spinn {
@@ -143,14 +162,14 @@ body {
   margin-top: 85px;
 }
 
-.location input {
+.location .research-bar {
   outline: none;
   border: none;
   background-color: #f3f3f3;
   font-size: medium;
 }
 
-.location input::-webkit-input-placeholder {
+.location .research-bar::-webkit-input-placeholder {
   color: black;
 }
 
@@ -170,6 +189,14 @@ body {
 }
 
 .intro .intro_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20%;
+  margin-right: 20%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 10px;
   border-radius: 100px;
   color: white;
@@ -179,6 +206,51 @@ body {
   text-decoration: none;
   -webkit-box-shadow: 2px 2px 11px -6px;
           box-shadow: 2px 2px 11px -6px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.intro .intro_btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: brightness(120%) saturate(120%);
+          filter: brightness(120%) saturate(120%);
+}
+
+label {
+  right: 25px;
+  bottom: 30px;
+  position: absolute;
+  font-size: 1.75em;
+}
+
+.boite {
+  visibility: hidden;
+  position: absolute;
+  right: 25px;
+  bottom: 30px;
+}
+
+input[type="checkbox"]:checked ~ i {
+  font-weight: 900;
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: heartanim 1.5s;
+          animation: heartanim 1.5s;
+}
+
+:hover {
+  cursor: pointer;
 }
 
 .function_title {
@@ -224,7 +296,7 @@ body {
   cursor: pointer;
 }
 
-.Function_step li.tuto:hover {
+.Function_step li:hover {
   background-color: #e4d5f6;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
@@ -232,7 +304,7 @@ body {
           transform: scale(1.03);
 }
 
-.Function_step li.tuto:hover i {
+.Function_step li:hover i {
   color: #9356DC;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
@@ -349,10 +421,6 @@ img {
   bottom: 30px;
 }
 
-.heart .restaurant_name__icon:hover {
-  background-color: #9356DC;
-}
-
 .district {
   margin-top: 5px;
 }
@@ -362,8 +430,9 @@ img {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     position: relative;
-    padding-bottom: 136px;
     border-radius: 2em 2em 0 0;
+    padding-top: 40px;
+    padding-bottom: 170px;
   }
   .restaurant .restaurant_title {
     position: absolute;
@@ -387,6 +456,7 @@ img {
     height: 90px;
     margin-left: 0px;
     margin-right: 0px;
+    padding-bottom: 30px;
   }
   .Function_step .tuto {
     border-radius: 2em;
@@ -397,14 +467,6 @@ img {
   .Function_step .tuto__icon {
     position: relative;
     left: -10px;
-  }
-  ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
   }
 }
 
@@ -436,6 +498,7 @@ img {
   padding-top: 30px;
   font-size: x-large;
   margin-bottom: 0px;
+  margin-bottom: 40px;
 }
 
 .top_like__icon {
@@ -459,20 +522,22 @@ img {
   border-radius: 1em;
   background-color: white;
   padding-left: 10px;
-  -webkit-animation-name: fadeInDown;
-          animation-name: fadeInDown;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   position: relative;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .food:hover .price {
   -webkit-animation-name: slideOutLeft;
           animation-name: slideOutLeft;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   display: block;
@@ -481,15 +546,29 @@ img {
 .food:hover .icon_valid {
   -webkit-animation-name: fadeInRight;
           animation-name: fadeInRight;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   display: inline;
 }
 
+.food:hover .icon_valid i {
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  background: white;
+  border-radius: 1em;
+  padding: 6px;
+  font-size: 15px;
+  color: #99E2D0;
+  margin-top: 20px;
+}
+
 .price {
   padding-right: 25px;
+  font-weight: bold;
 }
 
 .icon_valid {
@@ -506,18 +585,10 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: none;
-}
-
-.icon_valid i {
-  background: white;
-  border-radius: 1em;
-  padding: 6px;
-  font-size: 15px;
-  color: #99E2D0;
-  -webkit-animation: rotate 0.5s both;
-          animation: rotate 0.5s both;
-  margin-top: 20px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
 .composition {
@@ -546,6 +617,14 @@ img {
   text-decoration: none;
   -webkit-box-shadow: 2px 2px 11px -6px;
           box-shadow: 2px 2px 11px -6px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -553,9 +632,16 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 180px;
+  width: 60%;
   justify-self: center;
   margin-top: 35px;
+}
+
+.bottom_btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: brightness(120%) saturate(120%);
+          filter: brightness(120%) saturate(120%);
 }
 
 .meal_name {
@@ -569,14 +655,27 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .picture_top {
+    height: 400px;
+  }
   .container_menu {
+    margin-top: -50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding-top: 80px;
+    padding-bottom: 100px;
+  }
+  .meal_name {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 10px;
   }
   .meal {
     width: 100%;
+    position: relative;
+    grid-gap: 25px;
   }
   .entitled {
     font-size: 1em;
@@ -599,24 +698,18 @@ img {
   }
   .bottom_btn {
     position: absolute;
-    bottom: 0px;
-    width: 100%;
-    left: 0px;
-    right: auto;
-    border-radius: 0;
-    padding-right: 0px;
-    padding-left: 0px;
-    padding-top: 10px;
-    margin-bottom: 0px;
-    margin-right: 0px;
+    left: -100%;
+    width: 95%;
+    bottom: -80px;
+    font-size: large;
   }
 }
 
-@-webkit-keyframes fadeInDown {
+@-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
   }
   100% {
     opacity: 1;
@@ -625,11 +718,11 @@ img {
   }
 }
 
-@keyframes fadeInDown {
+@keyframes fadeInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
   }
   100% {
     opacity: 1;
@@ -684,27 +777,23 @@ img {
 
 @-webkit-keyframes fadeInRight {
   0% {
-    opacity: 0;
-    -webkit-transform-origin: 100% 0 0scaleX;
-            transform-origin: 100% 0 0scaleX;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
   }
   100% {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
   }
 }
 
 @keyframes fadeInRight {
   0% {
-    opacity: 0;
-    -webkit-transform-origin: 100% 0 0scaleX;
-            transform-origin: 100% 0 0scaleX;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
   }
   100% {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
   }
 }
 
@@ -761,6 +850,60 @@ img {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes effect_click {
+  50% {
+    -webkit-transform: scale(1.5, 1.5);
+            transform: scale(1.5, 1.5);
+    opacity: 0;
+  }
+  99% {
+    -webkit-transform: scale(0.001, 0.001);
+            transform: scale(0.001, 0.001);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(0.001, 0.001);
+            transform: scale(0.001, 0.001);
+    opacity: 1;
+  }
+}
+
+@keyframes effect_click {
+  50% {
+    -webkit-transform: scale(1.5, 1.5);
+            transform: scale(1.5, 1.5);
+    opacity: 0;
+  }
+  99% {
+    -webkit-transform: scale(0.001, 0.001);
+            transform: scale(0.001, 0.001);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(0.001, 0.001);
+            transform: scale(0.001, 0.001);
+    opacity: 1;
+  }
+}
+
+/* hearth animation gradient */
+@-webkit-keyframes heartanim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes heartanim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */

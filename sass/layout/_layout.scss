@@ -1,4 +1,4 @@
-@import "/Users/macbook/Desktop/OhMyFood/sass/utils/_utils.scss";
+@import "../utils/_utils.scss";
 .ohmyfood_logo_bloc{
     position: fixed;
     top: 0;
@@ -35,9 +35,7 @@ footer{
         }  
     }
     ul{
-        padding-left: 20px;
-        margin-top: 20px;
-        margin-bottom: 0px;
+        margin-left: -20px;
     }
     li{
         list-style: none;
@@ -48,4 +46,21 @@ footer{
         color: white;
         margin-right: 5px;
     }
+}
+
+@media screen and (min-width: 768px) {
+    footer{
+        padding-bottom: 10px;
+        padding-top: 20px;
+        .footer_title {
+            position: absolute;
+            padding-top: 0px;
+    }
+  }
+  ul{
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 110px;
+}
 }

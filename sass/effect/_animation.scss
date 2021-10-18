@@ -1,14 +1,13 @@
-@keyframes fadeInDown {
+@keyframes fadeInUp {
     0% {
-        opacity: 0;
-        transform: translate3d(0, -100%, 0);
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
     }
-
     100% {
-        opacity: 1;
-        transform: none;
+    opacity: 1;
+    transform: none;
     }
-}
+    } 
 
 
 @keyframes rotate {
@@ -33,12 +32,10 @@
 
     @keyframes fadeInRight {
     0% {
-    opacity: 0;
-    transform-origin : 100% 0 0scaleX;
+        transform: scaleX(0);
     }
     100% {
-    opacity: 1;
-    transform: none;
+        transform: scaleX(1);
     }
 } 
 
@@ -67,4 +64,29 @@
   100% {
       opacity: 0;
   }
+}
+
+@keyframes effect_click {
+    50% {
+      transform: scale(1.5, 1.5);
+      opacity: 0;
+    }
+    99% {
+      transform: scale(0.001, 0.001);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(0.001, 0.001);
+      opacity: 1;
+    }
+  }
+
+   /* hearth animation gradient */
+   @keyframes heartanim {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
 }

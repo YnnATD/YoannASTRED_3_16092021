@@ -70,7 +70,7 @@ body {
     padding-left: 55px;
     margin-top: 85px;
 
-    input {
+    .research-bar {
         outline: none;
         border: none;
         background-color: #f3f3f3;
@@ -97,9 +97,40 @@ body {
     }
 
     .intro_btn {
+        display: flex;
+        margin-left: 20%;
+        margin-right: 20%;
+        justify-content: center;
         @include button;
     }
 }
+
+label{
+    right: 25px;
+    bottom: 30px;
+    position: absolute;
+    font-size: 1.75em;
+    
+}
+.boite {
+    visibility: hidden;
+    position: absolute;
+    right: 25px;
+    bottom: 30px;
+  }
+
+  input[type="checkbox"]:checked ~ i {
+    font-weight: 900;
+    background: $color-gradient;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: heartanim 1.5s;
+  }
+  :hover {
+    cursor: pointer;
+  }
 
 .function_title {
     padding-left: 20px;
@@ -131,7 +162,7 @@ body {
         transition-duration: 400ms;
         cursor: pointer;
 
-        &.tuto:hover {
+        &:hover {
             background-color: #e4d5f6;
             ;
             transition: background-color 0.3s;
@@ -234,11 +265,9 @@ img {
         right: 25px;
         bottom: 30px;
 
-        &:hover {
-            background-color: $color-primary;
         }
     }
-}
+
 
 .district {
     margin-top: 5px;
@@ -248,8 +277,9 @@ img {
     .restaurant {
         grid-template-columns: 1fr 1fr;
         position: relative;
-        padding-bottom: 136px;
         border-radius: 2em 2em 0 0;
+        padding-top: 40px;
+        padding-bottom: 170px;
 
         .restaurant_title {
             position: absolute;
@@ -272,6 +302,7 @@ img {
         height: 90px;
         margin-left: 0px;
         margin-right: 0px;
+        padding-bottom: 30px;
 
         .tuto {
             border-radius: 2em;
@@ -284,10 +315,5 @@ img {
                 left: -10px;
             }
         }
-    }
-
-    ul {
-        display: flex;
-        justify-content: space-evenly;
     }
 }

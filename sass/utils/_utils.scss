@@ -18,7 +18,16 @@ $color-gradient:linear-gradient(to top left,$color-primary,$color-secondary);
     background:$color-gradient;
     text-decoration: none;
     @include box_shad;
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms;
+    &:hover{
+        transform: scale(1.1);
+        filter: brightness(120%) saturate(120%);
+
+    }
 }
+
 @mixin box_shad {
     box-shadow: 2px 2px 11px -6px
 }
