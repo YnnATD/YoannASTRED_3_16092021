@@ -1,27 +1,30 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$color-gradient:linear-gradient(to top left,$color-primary,$color-secondary);
+$color-gradient:linear-gradient(to top left, $color-primary, $color-secondary);
 
 @mixin police {
-    font-family: Shrikhand,"cursive";
+    font-family: Shrikhand, "cursive";
 }
+
 @mixin img_size {
     width: 335px;
     height: 175px;
 }
+
 @mixin button {
     padding: 10px;
     border-radius: 100px;
     color: white;
     cursor: pointer;
-    background:$color-gradient;
+    background: $color-gradient;
     text-decoration: none;
     @include box_shad;
     transform: scale(1);
     transition-property: transform;
     transition-duration: 400ms;
-    &:hover{
+
+    &:hover {
         transform: scale(1.1);
         filter: brightness(120%) saturate(120%);
 

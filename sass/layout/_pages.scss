@@ -105,21 +105,22 @@ body {
     }
 }
 
-label{
+label {
     right: 25px;
     bottom: 30px;
     position: absolute;
     font-size: 1.75em;
-    
+
 }
+
 .boite {
     visibility: hidden;
     position: absolute;
     right: 25px;
     bottom: 30px;
-  }
+}
 
-  input[type="checkbox"]:checked ~ i {
+input[type="checkbox"]:checked~i {
     font-weight: 900;
     background: $color-gradient;
     background-clip: text;
@@ -127,10 +128,11 @@ label{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: heartanim 1.5s;
-  }
-  :hover {
+}
+
+:hover {
     cursor: pointer;
-  }
+}
 
 .function_title {
     padding-left: 20px;
@@ -265,8 +267,8 @@ img {
         right: 25px;
         bottom: 30px;
 
-        }
     }
+}
 
 
 .district {

@@ -1,67 +1,77 @@
 @import "../utils/_utils.scss";
-.ohmyfood_logo_bloc{
+
+.ohmyfood_logo_bloc {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 2;
 }
-a{
+
+a {
     text-decoration: none;
-.header_logo{
-    @include police;
-    font-size: 2.5em;
-    text-align: center;
-    color: black;
-    padding-top: 31px;
-    padding-bottom: 15px;
-    margin: -21px;
-    background-color: white; 
-    box-shadow: 0px 2px 15px -5px #000000;
+
+    .header_logo {
+        @include police;
+        font-size: 2.5em;
+        text-align: center;
+        color: black;
+        padding-top: 31px;
+        padding-bottom: 15px;
+        margin: -21px;
+        background-color: white;
+        box-shadow: 0px 2px 15px -5px #000000;
+    }
 }
-}    
 
 
-footer{
+footer {
     background-color: #353535;
-    .footer_title{
+
+    .footer_title {
         @include police;
         color: white;
         padding-left: 25px;
         padding-top: 20px;
         margin-top: 0;
-        a{
-        color: white;
-        text-decoration: none;
-        }  
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
     }
-    ul{
+
+    ul {
         margin-left: -20px;
         margin-bottom: 0px;
     }
-    li{
+
+    li {
         list-style: none;
-        color:white;
+        color: white;
         padding-bottom: 5px;
     }
-    .footer__icon{
+
+    .footer__icon {
         color: white;
         margin-right: 5px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    footer{
+    footer {
         padding-bottom: 10px;
         padding-top: 20px;
+
         .footer_title {
             position: absolute;
             padding-top: 0px;
+        }
     }
-  }
-  ul{
-    margin-top: 0px;
-    display: flex;
-    justify-content: space-evenly;
-    padding-left: 110px;
-}
+
+    ul {
+        margin-top: 0px;
+        display: flex;
+        justify-content: space-evenly;
+        padding-left: 110px;
+    }
 }

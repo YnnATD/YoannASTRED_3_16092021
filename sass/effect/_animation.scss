@@ -1,20 +1,22 @@
 @keyframes fadeInUp {
     0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
     }
+
     100% {
-    opacity: 1;
-    transform: none;
+        opacity: 1;
+        transform: none;
     }
-    } 
+}
 
 
 @keyframes rotate {
     0% {
         transform: rotate(0);
-}
-100% {
+    }
+
+    100% {
         transform: rotate(360deg);
     }
 }
@@ -30,23 +32,26 @@
     }
 }
 
-    @keyframes fadeInRight {
+@keyframes fadeInRight {
     0% {
         transform: scaleX(0);
     }
+
     100% {
         transform: scaleX(1);
     }
-} 
+}
 
 @keyframes load {
     0% {
         visibility: visible;
         opacity: 0.9;
     }
+
     70% {
         opacity: 0.9;
     }
+
     100% {
         opacity: 0;
         visibility: hidden;
@@ -54,39 +59,44 @@
 }
 
 @keyframes spin {
-    0%{
-      transform:rotate(360deg);
-      opacity: 1;
+    0% {
+        transform: rotate(360deg);
+        opacity: 1;
     }
-    70%{
-    opacity: 0.5;
-  }
-  100% {
-      opacity: 0;
-  }
+
+    70% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 @keyframes effect_click {
     50% {
-      transform: scale(1.5, 1.5);
-      opacity: 0;
+        transform: scale(1.5, 1.5);
+        opacity: 0;
     }
-    99% {
-      transform: scale(0.001, 0.001);
-      opacity: 0;
-    }
-    100% {
-      transform: scale(0.001, 0.001);
-      opacity: 1;
-    }
-  }
 
-   /* hearth animation gradient */
-   @keyframes heartanim {
-    0% {
-      opacity: 0;
+    99% {
+        transform: scale(0.001, 0.001);
+        opacity: 0;
     }
+
     100% {
-      opacity: 1;
+        transform: scale(0.001, 0.001);
+        opacity: 1;
+    }
+}
+
+/* hearth animation gradient */
+@keyframes heartanim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
