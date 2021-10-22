@@ -256,9 +256,6 @@ input[type="checkbox"]:checked ~ i {
 
 i.fas.fa-heart {
   font-weight: normal;
-}
-
-:hover {
   cursor: pointer;
 }
 
@@ -305,7 +302,7 @@ i.fas.fa-heart {
   cursor: pointer;
 }
 
-.Function_step li:hover, .Function_step li :active {
+.Function_step li:hover {
   background-color: #e4d5f6;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
@@ -313,7 +310,7 @@ i.fas.fa-heart {
           transform: scale(1.03);
 }
 
-.Function_step li:hover .tuto__icon, .Function_step li :active .tuto__icon {
+.Function_step li:hover .tuto__icon {
   color: #9356DC;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
@@ -553,7 +550,7 @@ img {
   width: 100%;
 }
 
-.food:hover .price, .food :active .price {
+.food:hover .price {
   -webkit-animation-name: slideOutLeft;
           animation-name: slideOutLeft;
   -webkit-animation-duration: 800ms;
@@ -563,7 +560,7 @@ img {
   display: block;
 }
 
-.food:hover .icon_valid, .food :active .icon_valid {
+.food:hover .icon_valid {
   -webkit-animation-name: fadeInRight;
           animation-name: fadeInRight;
   -webkit-animation-duration: 800ms;
@@ -573,7 +570,27 @@ img {
   display: inline;
 }
 
-.food:hover .icon_valid i, .food :active .icon_valid i {
+.food:hover .icon_valid:active .price {
+  -webkit-animation-name: slideOutLeft;
+          animation-name: slideOutLeft;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  display: block;
+}
+
+.food:hover .icon_valid:active .icon_valid {
+  -webkit-animation-name: fadeInRight;
+          animation-name: fadeInRight;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  display: inline;
+}
+
+.food:hover .icon_valid i {
   -webkit-animation-name: rotate;
           animation-name: rotate;
   -webkit-animation-duration: 800ms;

@@ -63,19 +63,30 @@
     overflow: hidden;
     width: 100%;
 
-    &:hover .price, :active .price {
+    &:hover .price {
         animation-name: slideOutLeft;
         animation-duration: 800ms;
         animation-fill-mode: both;
         display: block;
     }
 
-    &:hover .icon_valid, :active .icon_valid {
+    &:hover .icon_valid {
         animation-name: fadeInRight;
         animation-duration: 800ms;
         animation-fill-mode: both;
         display: inline;
-
+&:active .price{
+    animation-name: slideOutLeft;
+    animation-duration: 800ms;
+    animation-fill-mode: both;
+    display: block;
+}
+&:active .icon_valid{
+    animation-name: fadeInRight;
+    animation-duration: 800ms;
+    animation-fill-mode: both;
+    display: inline;
+}
         i {
             animation-name: rotate;
             animation-duration: 800ms;

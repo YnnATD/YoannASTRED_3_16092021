@@ -207,9 +207,6 @@ input[type=checkbox]:checked ~ i {
 
 i.fas.fa-heart {
   font-weight: normal;
-}
-
-:hover {
   cursor: pointer;
 }
 
@@ -242,12 +239,12 @@ i.fas.fa-heart {
   transition-duration: 400ms;
   cursor: pointer;
 }
-.Function_step li:hover, .Function_step li :active {
+.Function_step li:hover {
   background-color: #e4d5f6;
   transition: background-color 0.3s;
   transform: scale(1.03);
 }
-.Function_step li:hover .tuto__icon, .Function_step li :active .tuto__icon {
+.Function_step li:hover .tuto__icon {
   color: #9356DC;
   transition: background-color 0.3s;
 }
@@ -447,19 +444,31 @@ img {
   overflow: hidden;
   width: 100%;
 }
-.food:hover .price, .food :active .price {
+.food:hover .price {
   animation-name: slideOutLeft;
   animation-duration: 800ms;
   animation-fill-mode: both;
   display: block;
 }
-.food:hover .icon_valid, .food :active .icon_valid {
+.food:hover .icon_valid {
   animation-name: fadeInRight;
   animation-duration: 800ms;
   animation-fill-mode: both;
   display: inline;
 }
-.food:hover .icon_valid i, .food :active .icon_valid i {
+.food:hover .icon_valid:active .price {
+  animation-name: slideOutLeft;
+  animation-duration: 800ms;
+  animation-fill-mode: both;
+  display: block;
+}
+.food:hover .icon_valid:active .icon_valid {
+  animation-name: fadeInRight;
+  animation-duration: 800ms;
+  animation-fill-mode: both;
+  display: inline;
+}
+.food:hover .icon_valid i {
   animation-name: rotate;
   animation-duration: 800ms;
   background: white;

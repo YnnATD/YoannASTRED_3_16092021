@@ -130,8 +130,6 @@ input[type="checkbox"]:checked~i {
 }
 i.fas.fa-heart{
     font-weight: normal;
-}
-:hover {
     cursor: pointer;
 }
 
@@ -165,7 +163,7 @@ i.fas.fa-heart{
         transition-duration: 400ms;
         cursor: pointer;
 
-        &:hover, & :active {
+        &:hover {
             background-color: #e4d5f6;
             ;
             transition: background-color 0.3s;
