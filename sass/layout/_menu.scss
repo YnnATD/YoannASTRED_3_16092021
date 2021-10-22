@@ -27,6 +27,7 @@
     font-size: x-large;
     margin-bottom: 0px;
     margin-bottom: 40px;
+    margin-right: 60px;
 }
 
 .top_like {
@@ -57,6 +58,9 @@
     animation-fill-mode: both;
     position: relative;
     animation-delay: 2s;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
 
     &:hover .price {
         animation-name: slideOutLeft;
@@ -87,6 +91,10 @@
 .price {
     padding-right: 25px;
     font-weight: bold;
+    position: absolute;
+    right: 0px;
+    bottom: 9px;
+    font-size: initial;
 }
 
 .icon_valid {
@@ -104,15 +112,20 @@
 }
 
 .composition {
-    display: flex;
-    justify-content: space-between;
     margin-top: 5px;
     margin-bottom: 10px;
     font-size: smaller;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-right: 105px;
 }
 
 .entitled {
     margin-bottom: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 100px;
 }
 
 .bottom_btn {

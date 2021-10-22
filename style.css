@@ -44,6 +44,9 @@ footer li {
   color: white;
   padding-bottom: 5px;
 }
+footer li a {
+  color: white;
+}
 footer .footer__icon {
   color: white;
   margin-right: 5px;
@@ -202,6 +205,10 @@ input[type=checkbox]:checked ~ i {
   animation: heartanim 1.5s;
 }
 
+i.fas.fa-heart {
+  font-weight: normal;
+}
+
 :hover {
   cursor: pointer;
 }
@@ -240,7 +247,7 @@ input[type=checkbox]:checked ~ i {
   transition: background-color 0.3s;
   transform: scale(1.03);
 }
-.Function_step li:hover i {
+.Function_step li:hover .tuto__icon {
   color: #9356DC;
   transition: background-color 0.3s;
 }
@@ -404,6 +411,7 @@ img {
   font-size: x-large;
   margin-bottom: 0px;
   margin-bottom: 40px;
+  margin-right: 60px;
 }
 
 .top_like {
@@ -434,6 +442,9 @@ img {
   animation-fill-mode: both;
   position: relative;
   animation-delay: 2s;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
 }
 .food:hover .price {
   animation-name: slideOutLeft;
@@ -461,6 +472,10 @@ img {
 .price {
   padding-right: 25px;
   font-weight: bold;
+  position: absolute;
+  right: 0px;
+  bottom: 9px;
+  font-size: initial;
 }
 
 .icon_valid {
@@ -478,15 +493,20 @@ img {
 }
 
 .composition {
-  display: flex;
-  justify-content: space-between;
   margin-top: 5px;
   margin-bottom: 10px;
   font-size: smaller;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-right: 105px;
 }
 
 .entitled {
   margin-bottom: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 100px;
 }
 
 .bottom_btn {
@@ -645,7 +665,6 @@ img {
     opacity: 1;
   }
 }
-/* hearth animation gradient */
 @keyframes heartanim {
   0% {
     opacity: 0;

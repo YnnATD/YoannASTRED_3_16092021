@@ -110,7 +110,6 @@ label {
     bottom: 30px;
     position: absolute;
     font-size: 1.75em;
-
 }
 
 .boite {
@@ -129,7 +128,9 @@ input[type="checkbox"]:checked~i {
     -webkit-text-fill-color: transparent;
     animation: heartanim 1.5s;
 }
-
+i.fas.fa-heart{
+    font-weight: normal;
+}
 :hover {
     cursor: pointer;
 }
@@ -170,7 +171,7 @@ input[type="checkbox"]:checked~i {
             transition: background-color 0.3s;
             transform: scale(1.03);
 
-            i {
+            .tuto__icon {
                 color: $color-primary;
                 transition: background-color 0.3s;
             }
