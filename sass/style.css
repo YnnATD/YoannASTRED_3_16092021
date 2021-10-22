@@ -303,6 +303,8 @@ i.fas.fa-heart {
   -webkit-transition-duration: 400ms;
           transition-duration: 400ms;
   cursor: pointer;
+  -ms-touch-action: auto;
+      touch-action: auto;
 }
 
 .Function_step li:hover {
@@ -548,6 +550,8 @@ img {
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
+  -ms-touch-action: auto;
+      touch-action: auto;
 }
 
 .food:hover .price {

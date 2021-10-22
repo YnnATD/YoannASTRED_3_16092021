@@ -61,6 +61,7 @@
     white-space: nowrap;
     overflow: hidden;
     width: 100%;
+    touch-action: auto;
 
     &:hover .price {
         animation-name: slideOutLeft;

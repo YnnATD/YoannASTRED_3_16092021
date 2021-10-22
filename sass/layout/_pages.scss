@@ -164,6 +164,7 @@ i.fas.fa-heart{
         transition-property: transform;
         transition-duration: 400ms;
         cursor: pointer;
+        touch-action: auto;
 
         &:hover {
             background-color: #e4d5f6;

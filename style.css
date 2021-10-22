@@ -241,6 +241,7 @@ i.fas.fa-heart {
   transition-property: transform;
   transition-duration: 400ms;
   cursor: pointer;
+  touch-action: auto;
 }
 .Function_step li:hover {
   background-color: #e4d5f6;
@@ -445,6 +446,7 @@ img {
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
+  touch-action: auto;
 }
 .food:hover .price {
   animation-name: slideOutLeft;
