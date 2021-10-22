@@ -63,14 +63,14 @@
     overflow: hidden;
     width: 100%;
 
-    &:hover .price {
+    &:hover .price, :active .price {
         animation-name: slideOutLeft;
         animation-duration: 800ms;
         animation-fill-mode: both;
         display: block;
     }
 
-    &:hover .icon_valid {
+    &:hover .icon_valid, :active .icon_valid {
         animation-name: fadeInRight;
         animation-duration: 800ms;
         animation-fill-mode: both;

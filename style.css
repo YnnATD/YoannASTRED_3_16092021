@@ -242,18 +242,18 @@ i.fas.fa-heart {
   transition-duration: 400ms;
   cursor: pointer;
 }
-.Function_step li:hover {
+.Function_step li:hover, .Function_step li :active {
   background-color: #e4d5f6;
   transition: background-color 0.3s;
   transform: scale(1.03);
 }
-.Function_step li:hover .tuto__icon {
+.Function_step li:hover .tuto__icon, .Function_step li :active .tuto__icon {
   color: #9356DC;
   transition: background-color 0.3s;
 }
 .Function_step li .tuto__icon {
-  position: absolute;
-  left: 25px;
+  float: left;
+  margin-left: 5px;
   color: #7e7e7e;
 }
 .Function_step li::before {
@@ -447,19 +447,19 @@ img {
   overflow: hidden;
   width: 100%;
 }
-.food:hover .price {
+.food:hover .price, .food :active .price {
   animation-name: slideOutLeft;
   animation-duration: 800ms;
   animation-fill-mode: both;
   display: block;
 }
-.food:hover .icon_valid {
+.food:hover .icon_valid, .food :active .icon_valid {
   animation-name: fadeInRight;
   animation-duration: 800ms;
   animation-fill-mode: both;
   display: inline;
 }
-.food:hover .icon_valid i {
+.food:hover .icon_valid i, .food :active .icon_valid i {
   animation-name: rotate;
   animation-duration: 800ms;
   background: white;

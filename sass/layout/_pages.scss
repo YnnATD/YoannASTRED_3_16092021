@@ -165,7 +165,7 @@ i.fas.fa-heart{
         transition-duration: 400ms;
         cursor: pointer;
 
-        &:hover {
+        &:hover, & :active {
             background-color: #e4d5f6;
             ;
             transition: background-color 0.3s;
@@ -178,8 +178,8 @@ i.fas.fa-heart{
         }
 
         .tuto__icon {
-            position: absolute;
-            left: 25px;
+            float: left;
+            margin-left: 5px;
             color: #7e7e7e;
         }
 

@@ -305,7 +305,7 @@ i.fas.fa-heart {
   cursor: pointer;
 }
 
-.Function_step li:hover {
+.Function_step li:hover, .Function_step li :active {
   background-color: #e4d5f6;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
@@ -313,15 +313,15 @@ i.fas.fa-heart {
           transform: scale(1.03);
 }
 
-.Function_step li:hover .tuto__icon {
+.Function_step li:hover .tuto__icon, .Function_step li :active .tuto__icon {
   color: #9356DC;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
 
 .Function_step li .tuto__icon {
-  position: absolute;
-  left: 25px;
+  float: left;
+  margin-left: 5px;
   color: #7e7e7e;
 }
 
@@ -553,7 +553,7 @@ img {
   width: 100%;
 }
 
-.food:hover .price {
+.food:hover .price, .food :active .price {
   -webkit-animation-name: slideOutLeft;
           animation-name: slideOutLeft;
   -webkit-animation-duration: 800ms;
@@ -563,7 +563,7 @@ img {
   display: block;
 }
 
-.food:hover .icon_valid {
+.food:hover .icon_valid, .food :active .icon_valid {
   -webkit-animation-name: fadeInRight;
           animation-name: fadeInRight;
   -webkit-animation-duration: 800ms;
@@ -573,7 +573,7 @@ img {
   display: inline;
 }
 
-.food:hover .icon_valid i {
+.food:hover .icon_valid i, .food :active .icon_valid i {
   -webkit-animation-name: rotate;
           animation-name: rotate;
   -webkit-animation-duration: 800ms;
