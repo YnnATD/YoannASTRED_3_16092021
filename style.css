@@ -159,6 +159,7 @@ body {
 }
 .intro .intro_subtitle {
   margin-bottom: 30px;
+  padding: 0 5px;
 }
 .intro .intro_btn {
   display: flex;
@@ -385,6 +386,7 @@ img {
   right: 0px;
   padding-left: 15px;
   top: 45px;
+  color: black;
 }
 
 .picture_top {
@@ -438,37 +440,38 @@ img {
   animation-name: fadeInUp;
   animation-duration: 1.5s;
   animation-fill-mode: both;
-  position: relative;
-  animation-delay: 2s;
   white-space: nowrap;
   overflow: hidden;
+  display: flex;
+}
+.food.delay-1 {
+  animation-delay: 1000ms;
+}
+.food.delay-2 {
+  animation-delay: 1500ms;
+}
+.food.delay-3 {
+  animation-delay: 2000ms;
+}
+.food.delay-4 {
+  animation-delay: 2500ms;
+}
+.food .food_detail {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 .food:hover .price {
-  animation-name: slideOutLeft;
-  animation-duration: 800ms;
-  animation-fill-mode: both;
-  display: block;
+  padding-right: 70px;
+  transition: 0.5s ease;
 }
 .food:hover .icon_valid {
-  animation-name: fadeInRight;
-  animation-duration: 800ms;
-  animation-fill-mode: both;
-  display: inline;
-}
-.food:hover .icon_valid:active .price {
   animation-name: slideOutLeft;
   animation-duration: 800ms;
   animation-fill-mode: both;
-  display: block;
 }
-.food:hover .icon_valid:active .icon_valid {
-  animation-name: fadeInRight;
-  animation-duration: 800ms;
-  animation-fill-mode: both;
-  display: inline;
-}
-.food:hover .icon_valid i {
+
+.menuItem__icon {
   animation-name: rotate;
   animation-duration: 800ms;
   background: white;
@@ -479,27 +482,27 @@ img {
   margin-top: 20px;
 }
 
+.txt {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .price {
-  padding-right: 25px;
   font-weight: bold;
-  position: absolute;
-  right: 0px;
-  bottom: 9px;
   font-size: initial;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 8px;
+  padding-right: 25px;
 }
 
 .icon_valid {
-  position: absolute;
   background: #99E2D0;
-  border-radius: 0 15px 15px 0;
-  right: 0px;
-  padding: 0 13px;
-  height: 100%;
-  bottom: 0px;
-  display: flex;
-  align-items: center;
-  transform: scale(0);
-  transform-origin: right;
+  width: 60px;
+  margin-right: -60px;
+  text-align-last: center;
 }
 
 .composition {
@@ -508,7 +511,6 @@ img {
   font-size: smaller;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin-right: 105px;
 }
 
 .entitled {
@@ -516,7 +518,6 @@ img {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-right: 100px;
 }
 
 .bottom_btn {
@@ -626,14 +627,6 @@ img {
   }
   100% {
     transform: translateX(-100%);
-  }
-}
-@keyframes fadeInRight {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
   }
 }
 @keyframes load {

@@ -191,6 +191,7 @@ body {
 
 .intro .intro_subtitle {
   margin-bottom: 30px;
+  padding: 0 5px;
 }
 
 .intro .intro_btn {
@@ -482,6 +483,7 @@ img {
   right: 0px;
   padding-left: 15px;
   top: 45px;
+  color: black;
 }
 
 .picture_top {
@@ -542,55 +544,59 @@ img {
           animation-duration: 1.5s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  position: relative;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
   white-space: nowrap;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.food.delay-1 {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+
+.food.delay-2 {
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+}
+
+.food.delay-3 {
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+}
+
+.food.delay-4 {
+  -webkit-animation-delay: 2500ms;
+          animation-delay: 2500ms;
+}
+
+.food .food_detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
 }
 
 .food:hover .price {
-  -webkit-animation-name: slideOutLeft;
-          animation-name: slideOutLeft;
-  -webkit-animation-duration: 800ms;
-          animation-duration: 800ms;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  display: block;
+  padding-right: 70px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .food:hover .icon_valid {
-  -webkit-animation-name: fadeInRight;
-          animation-name: fadeInRight;
-  -webkit-animation-duration: 800ms;
-          animation-duration: 800ms;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  display: inline;
-}
-
-.food:hover .icon_valid:active .price {
   -webkit-animation-name: slideOutLeft;
           animation-name: slideOutLeft;
   -webkit-animation-duration: 800ms;
           animation-duration: 800ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  display: block;
 }
 
-.food:hover .icon_valid:active .icon_valid {
-  -webkit-animation-name: fadeInRight;
-          animation-name: fadeInRight;
-  -webkit-animation-duration: 800ms;
-          animation-duration: 800ms;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  display: inline;
-}
-
-.food:hover .icon_valid i {
+.menuItem__icon {
   -webkit-animation-name: rotate;
           animation-name: rotate;
   -webkit-animation-duration: 800ms;
@@ -603,33 +609,33 @@ img {
   margin-top: 20px;
 }
 
-.price {
-  padding-right: 25px;
-  font-weight: bold;
-  position: absolute;
-  right: 0px;
-  bottom: 9px;
-  font-size: initial;
+.txt {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-.icon_valid {
-  position: absolute;
-  background: #99E2D0;
-  border-radius: 0 15px 15px 0;
-  right: 0px;
-  padding: 0 13px;
-  height: 100%;
-  bottom: 0px;
+.price {
+  font-weight: bold;
+  font-size: initial;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transform-origin: right;
-          transform-origin: right;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 8px;
+  padding-right: 25px;
+}
+
+.icon_valid {
+  background: #99E2D0;
+  width: 60px;
+  margin-right: -60px;
+  text-align-last: center;
 }
 
 .composition {
@@ -638,7 +644,6 @@ img {
   font-size: smaller;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin-right: 105px;
 }
 
 .entitled {
@@ -646,7 +651,6 @@ img {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-right: 100px;
 }
 
 .bottom_btn {
@@ -814,28 +818,6 @@ img {
   100% {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
-  }
-}
-
-@-webkit-keyframes fadeInRight {
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-}
-
-@keyframes fadeInRight {
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
   }
 }
 

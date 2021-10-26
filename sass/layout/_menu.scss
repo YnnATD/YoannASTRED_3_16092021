@@ -4,6 +4,7 @@
     right: 0px;
     padding-left: 15px;
     top: 45px;
+    color: black;
 }
 
 .picture_top {
@@ -36,7 +37,8 @@
     right: 30px;
     top: 35px;
     height: fit-content;
-    input{
+
+    input {
         visibility: hidden;
     }
 }
@@ -57,70 +59,78 @@
     animation-name: fadeInUp;
     animation-duration: 1.5s;
     animation-fill-mode: both;
-    position: relative;
-    animation-delay: 2s;
     white-space: nowrap;
     overflow: hidden;
-    width: 100%;
+    display: flex;
+
+    &.delay-1 {
+        animation-delay: 1000ms;
+    }
+
+    &.delay-2 {
+        animation-delay: 1500ms;
+    }
+
+    &.delay-3 {
+        animation-delay: 2000ms;
+    }
+
+    &.delay-4 {
+        animation-delay: 2500ms;
+    }
+
+    .food_detail {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
 
     &:hover .price {
-        animation-name: slideOutLeft;
-        animation-duration: 800ms;
-        animation-fill-mode: both;
-        display: block;
+        padding-right: 70px;
+        transition: 0.5s ease;
+
     }
 
     &:hover .icon_valid {
-        animation-name: fadeInRight;
+        animation-name: slideOutLeft;
         animation-duration: 800ms;
         animation-fill-mode: both;
-        display: inline;
-&:active .price{
-    animation-name: slideOutLeft;
-    animation-duration: 800ms;
-    animation-fill-mode: both;
-    display: block;
-}
-&:active .icon_valid{
-    animation-name: fadeInRight;
-    animation-duration: 800ms;
-    animation-fill-mode: both;
-    display: inline;
-}
-        i {
-            animation-name: rotate;
-            animation-duration: 800ms;
-            background: white;
-            border-radius: 1em;
-            padding: 6px;
-            font-size: 15px;
-            color: #99E2D0;
-            margin-top: 20px;
-        }
     }
 }
 
+.menuItem__icon {
+    animation-name: rotate;
+    animation-duration: 800ms;
+    background: white;
+    border-radius: 1em;
+    padding: 6px;
+    font-size: 15px;
+    color: #99E2D0;
+    margin-top: 20px;
+}
+
+.txt {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 .price {
-    padding-right: 25px;
     font-weight: bold;
-    position: absolute;
-    right: 0px;
-    bottom: 9px;
     font-size: initial;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 8px;
+    padding-right: 25px;
+
 }
 
 .icon_valid {
-    position: absolute;
     background: #99E2D0;
-    border-radius: 0 15px 15px 0;
-    right: 0px;
-    padding: 0 13px;
-    height: 100%;
-    bottom: 0px;
-    display: flex;
-    align-items: center;
-    transform: scale(0);
-    transform-origin: right;
+    width: 60px;
+    margin-right: -60px;
+    text-align-last: center;
 }
 
 .composition {
@@ -129,7 +139,6 @@
     font-size: smaller;
     text-overflow: ellipsis;
     overflow: hidden;
-    margin-right: 105px;
 }
 
 .entitled {
@@ -137,7 +146,6 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-right: 100px;
 }
 
 .bottom_btn {
