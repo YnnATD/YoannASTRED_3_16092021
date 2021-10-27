@@ -85,22 +85,26 @@
         width: 100%;
     }
 
-    &:hover .price {
-        padding-right: 70px;
-        transition: 0.5s ease;
+    &:hover{
+        .price {
+            padding-right: 70px;
+            transition: 0.5s ease;
+        }
 
-    }
+        .icon_valid {
+            animation-name: slideOutLeft;
+            animation-duration: 800ms;
+            animation-fill-mode: both;
+        }
 
-    &:hover .icon_valid {
-        animation-name: slideOutLeft;
-        animation-duration: 800ms;
-        animation-fill-mode: both;
-    }
+        .menuItem__icon {
+            transform: rotate(360deg);
+        }
+}
 }
 
 .menuItem__icon {
-    animation-name: rotate;
-    animation-duration: 800ms;
+    transition-duration: 0.8s;
     background: white;
     border-radius: 1em;
     padding: 6px;
@@ -131,6 +135,9 @@
     width: 60px;
     margin-right: -60px;
     text-align-last: center;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
 }
 
 .composition {

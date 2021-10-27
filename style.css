@@ -470,10 +470,12 @@ img {
   animation-duration: 800ms;
   animation-fill-mode: both;
 }
+.food:hover .menuItem__icon {
+  transform: rotate(360deg);
+}
 
 .menuItem__icon {
-  animation-name: rotate;
-  animation-duration: 800ms;
+  transition-duration: 0.8s;
   background: white;
   border-radius: 1em;
   padding: 6px;
@@ -503,6 +505,9 @@ img {
   width: 60px;
   margin-right: -60px;
   text-align-last: center;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
 }
 
 .composition {

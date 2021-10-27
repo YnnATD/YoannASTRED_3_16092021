@@ -596,11 +596,14 @@ img {
           animation-fill-mode: both;
 }
 
+.food:hover .menuItem__icon {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
 .menuItem__icon {
-  -webkit-animation-name: rotate;
-          animation-name: rotate;
-  -webkit-animation-duration: 800ms;
-          animation-duration: 800ms;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
   background: white;
   border-radius: 1em;
   padding: 6px;
@@ -636,6 +639,15 @@ img {
   width: 60px;
   margin-right: -60px;
   text-align-last: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .composition {
