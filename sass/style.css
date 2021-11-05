@@ -434,11 +434,8 @@ img {
 
 @media screen and (min-width: 768px) {
   main {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10%;
+    margin-right: 10%;
   }
   .restaurant {
     -ms-grid-columns: 1fr 1fr;
@@ -595,12 +592,8 @@ img {
 }
 
 .food:hover .icon_valid {
-  -webkit-animation-name: slideOutLeft;
-          animation-name: slideOutLeft;
-  -webkit-animation-duration: 800ms;
-          animation-duration: 800ms;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
 }
 
 .food:hover .menuItem__icon {
@@ -639,6 +632,8 @@ img {
           align-items: flex-end;
   padding-bottom: 8px;
   padding-right: 25px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
 .icon_valid {
@@ -655,6 +650,8 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
 .composition {
@@ -730,11 +727,6 @@ img {
     display: flex;
     padding-top: 80px;
     padding-bottom: 100px;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    margin-left: auto;
-    margin-right: auto;
   }
   .meal_name {
     height: -webkit-fit-content;
@@ -820,28 +812,6 @@ img {
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes slideOutLeft {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-}
-
-@keyframes slideOutLeft {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
   }
 }
 

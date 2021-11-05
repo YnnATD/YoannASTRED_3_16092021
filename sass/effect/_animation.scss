@@ -21,17 +21,6 @@
     }
 }
 
-
-@keyframes slideOutLeft {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
 @keyframes load {
     0% {
         visibility: visible;

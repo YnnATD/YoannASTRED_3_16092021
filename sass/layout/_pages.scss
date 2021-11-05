@@ -129,7 +129,8 @@ input[type="checkbox"]:checked~i {
     -webkit-text-fill-color: transparent;
     animation: heartanim 1.5s;
 }
-i.fas.fa-heart{
+
+i.fas.fa-heart {
     font-weight: normal;
     cursor: pointer;
 }
@@ -276,12 +277,12 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-    main{
-        width: max-content;
-        margin-left: auto;
-        margin-right: auto;
+
+    main {
+        margin-left: 10%;
+        margin-right: 10%;
     }
-    
+
     .restaurant {
         grid-template-columns: 1fr 1fr;
         position: relative;
